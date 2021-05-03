@@ -1,4 +1,4 @@
-// CHECK IF BINARY REPRESENTATION OF GIVEN NUMBER HAS ALTERNATE 1'S and 0'S
+// Find missing string between two strings (only one character missing)
 
 #include<bits/stdc++.h>
 using namespace std;
@@ -9,6 +9,7 @@ char findTheDifference(string s, string t) {
     }
     return char(sum);
 }
+
 int main(){
     cout<<findTheDifference("abc","cbda")<<endl;
     cout<<findTheDifference("","a")<<endl;
