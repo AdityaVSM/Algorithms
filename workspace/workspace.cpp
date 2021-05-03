@@ -1,18 +1,32 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-void subString(string &s, int index=0, string cur=""){
-    if(index == s.length()){
-        cout<<cur<<" ";
-        return;
+
+int majorityElement(vector<int>& nums) {
+    int count=0,element=nums[0];
+    int size=nums.size();
+    for(int i=1;i<nums.size();i++){
+        if(element==nums[i])
+            count++;
+        else{
+            count--;
+            if(count==-1){
+                element=nums[i];
+                count=0;
+            }
+        }
     }
-    subString(s, index+1, cur);
-    subString(s, index+1, cur+s[index]);
+    int counter=0;
+    for(int i=0;i<nums.size();i++){
+        if(nums[i]==element)
+            counter++;
+    }
+    return counter>size/2 ? element : -1;
 }
+
 
 int main(){
     vector<int> arr = {4,1,2,1,2};
-    string s ="ABC";
-    subString(s);
+    
     return 0;
 }
