@@ -1,15 +1,18 @@
 #include<bits/stdc++.h>
 using namespace std;
-void toh(int n, char s, char d, char t){
-    if(n==1){
-        cout<<"move disc "<<1<<" from "<<s<<" to "<<t<<endl;
-        return;
+int toh(int N, char from, char to, char aux){
+    int count=0;
+    if(N==1){
+        cout<<"move disk 1 from rod "<<from<<" to rod "<<to<<endl;
+        return count+1;
     }
-    toh(n-1,s,t,d);
-    cout<<"Move disc "<<n<<" from "<<s<<" to "<<t<<endl;
-    toh(n-1,d,s,t);
+    count+=toh(N-1,from,aux,to);
+    cout<<"move disk "<<N<<" from rod "<<from<<" to rod "<<to<<endl;
+    count+=toh(N-1,aux,to,from);
+    return count+1;
 }
+
 int main(){
-    toh(3,'s','d','t');
+    cout<<toh(3,'s','d','t')<<endl;
     return 0;
 }
