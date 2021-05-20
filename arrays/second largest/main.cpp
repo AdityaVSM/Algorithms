@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-//returns INDEX of second largest element else -1       O(n) TWO iterations
+//returns INDEX of second largest element else -1       THETA(n) TWO iterations
 int secLargest(int arr[], int n){
     int max = 0;
     int secmax = -1;
@@ -22,7 +22,7 @@ int secLargest(int arr[], int n){
     return secmax;
 }
 
-//returns INDEX of second largest element else -1       O(n) ONE iteration
+//returns INDEX of second largest element else -1       THETA(n) ONE iteration
 int secLargest2(int arr[], int n){
     int max = 0;
     int secmax = -1;
