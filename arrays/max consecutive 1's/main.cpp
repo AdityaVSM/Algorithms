@@ -17,6 +17,7 @@ int max1(int arr[], int n){
     return res;
 }
 
+//theta(n)
 int max2(int arr[], int n){
     int res=0,count=0;
     for(int i=0; i<n; i++){
