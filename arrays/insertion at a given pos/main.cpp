@@ -5,7 +5,7 @@ int insert(int arr[], int n, int size, int pos, int val){
     if(n == size){
         return n;
     }
-    int index = pos-1;
+    int index = pos;
     for(int i=n-1; i>=index; i--){
         arr[i+1] = arr[i];
     }
@@ -17,6 +17,8 @@ int main(){
     int arr[10] = {1,2,3,4};
     int pos = 3,val = 10;
     int n = insert(arr,4,10,pos,val);
-    cout<<n<<endl;
+    for(int i=0; i<n; i++){
+        cout << arr[i] << " ";
+    }
     return 0;
 }
