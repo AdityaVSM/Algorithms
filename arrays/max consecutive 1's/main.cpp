@@ -21,7 +21,7 @@ int max1(int arr[], int n){
 int max2(int arr[], int n){
     int res=0,count=0;
     for(int i=0; i<n; i++){
-        if(arr[i] == 0) 
+        if(arr[i] != 1) 
             count=0;
         else
             count++;  
@@ -31,7 +31,7 @@ int max2(int arr[], int n){
 }
 
 int main(){
-    int arr[] = {0,1,1,1,0,1};
+    int arr[] = {98,1,1,31,2,1};
     int n = 6;
     cout << max1(arr,n) <<endl;
     cout << max2(arr,n) <<endl;
