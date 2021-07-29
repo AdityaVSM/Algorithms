@@ -10,8 +10,7 @@ int majority(int arr[], int n){
             if(arr[i] == arr[j])
                 count++;
         }
-        if(count > n/2)
-            return i;
+        return i;
     }
     return -1;
 }
@@ -36,8 +35,6 @@ int majority2(int arr[], int n){        //Might not return index of first occure
         if(arr[res] == arr[i])
             count++;
     }
-    if(count <= n/2)
-        res = -1;
     return res;
 }
 
