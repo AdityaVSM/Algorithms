@@ -3,12 +3,11 @@ using namespace std;
 
 //Return largest element
 int largest(int arr[], int n){
-    int max = arr[0];
+    int res = arr[0];
     for(int i=0;i<n;i++){
-        if(arr[i] > max)
-            max = arr[i];
+        res = max(arr[i], res);
     }
-    return max;
+    return res;
 }
 int main(){
     int arr[] = {12,12,13,1,2,121};
