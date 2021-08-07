@@ -58,7 +58,7 @@ void subArraySum(int arr[], int n, int sum){
 
 int main(){
     int arr[] = {5,-10,6,90,3};
-    int k=2;
+    int k = 2;
     int n = 5;
     cout << maxSum1(arr,n,k) << endl;
     cout << maxSum2(arr,n,k) << endl;
