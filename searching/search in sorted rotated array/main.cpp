@@ -5,7 +5,7 @@ Sorted rotated array = sorted array is rotated (clock/counter clock) n times (n>
 using namespace std;
 //Naive linear search
 
-//Binary search
+//Binary search  O(logn)
 int bin_search(int n, int a[], int key){
     int low = 0,high = n-1;
     while(low<=high){
