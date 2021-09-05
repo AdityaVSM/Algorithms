@@ -19,7 +19,7 @@ int naive(int a[], int n){      //O(nlogn) O(1)
     return -1;
 }
 
-int efficient(int a[], int n){  //O(n) O(n)
+int efficient(int a[], int n){ 
     bool visited[n] = {false};
     for(int i=0; i<n; i++){
         if(visited[a[i]])
