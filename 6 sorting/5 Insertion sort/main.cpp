@@ -1,7 +1,13 @@
 #include<bits/stdc++.h>
 using namespace std;
-
-void insertionSort(int a[], int n){
+/*
+best case = O(n) -> when arr is sorted
+worst case = O(n*n) -> when arr is in reverse order
+best algo when arr size is small
+in-place
+stable 👍
+*/
+void insertionSort(int a[], int n){ 
     for(int i=1; i<n; i++){
         int key = a[i];
         int j = i-1;
