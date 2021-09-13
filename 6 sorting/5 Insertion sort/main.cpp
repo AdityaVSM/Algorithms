@@ -27,11 +27,11 @@ void printArray(int a[], int n){
 }
 
 int main(){
-    int a[] = {5,4,3,2,10};
-    int n = 5;
-    printArray(a,n);
-
-    insertionSort(a,n);
-    printArray(a,n);
+    void printArray(int a[], int n){
+    for(int i=0; i<n; i++){
+        cout << a[i] << " ";
+    }
+    cout << "\n";
+}
     return 0;
 }
