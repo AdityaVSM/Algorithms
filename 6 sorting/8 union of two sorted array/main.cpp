@@ -18,7 +18,7 @@ void naive(int a[], int n1, int b[], int n2){   //Time=O((n1+n2)*log(n1+n2)) spa
     }
 }
 
-void efficient(int a[], int n1, int b[], int n2){ 
+void efficient(int a[], int n1, int b[], int n2){   
     int i=0,j=0;
     while(i<n1 && j<n2){
         if(i>0 && a[i]==a[i-1]){
