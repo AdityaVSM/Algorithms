@@ -33,11 +33,11 @@ void mergeSort(int arr[],int l,int r){
 
 int main() {
 	
-    int a[]={10,5,30,15,7};
+    int a[]={10,5,30,15};
 	int l=0,r=4;
     for(int x: a)
 	    cout<<x<<" ";
-    cout<<"\n";
+    cout<<"\n";0
 	
 	mergeSort(a,l,r);
 	for(int x: a)
