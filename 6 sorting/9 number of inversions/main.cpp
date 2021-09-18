@@ -46,7 +46,7 @@ int mergeAndSort(int a[], int l, int m, int r){
 }
 
 int efficient(int a[], int l, int r){
-    int res = 0;
+    int res = 0; 
     if(l<r){
         int m = (l+r)/2;
         res += efficient(a,l,m);
