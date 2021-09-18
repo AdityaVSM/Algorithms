@@ -34,6 +34,16 @@ int lomutoPartition(int arr[], int l, int h){   //Time O(n) space O(1)
     swap(arr[i+1],arr[h]);
     return i+1;
 }
+int hoarePartition(int a[], int l, int h){  //Time O(n) space O(1)
+    int pivot = a[l];
+    int i = l-1, j = h+1;
+    while(true){
+        do{i++;}while(a[i] < pivot);
+        do{j--;}while(a[j] > pivot);
+        if(i>=j) return j;
+        swap(a[i], a[j]);
+    }
+}
 void printArray(int a[], int n){
     for(int i=0; i<n; i++)
         cout << a[i] <<" ";
@@ -44,7 +54,9 @@ int main(){
     int n = sizeof(a)/sizeof(a[0]);
     int l=0,h=n-1;
     int pivot = 0;
-    cout << lomutoPartition(a,l,h) << endl;
+    // cout << naive(a,l,h,pivot);
+    // cout << lomutoPartition(a,l,h) << endl;
+    cout << hoarePartition(a,l,h) << endl;
     printArray(a,n);
     return 0;
 }
