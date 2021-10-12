@@ -7,7 +7,7 @@ return that min difference.
 #include<bits/stdc++.h>
 using namespace std;
 
-int chocolateDistribute(int a[], int n, int m){
+int chocolateDistribute(int a[], int n, int m){ //O(n*logn)
     if(m>n)
         return -1;
     sort(a,a+n);
