@@ -6,7 +6,8 @@ ex: a[] = {0,0,1,1,0,1,0}
 
 #include<bits/stdc++.h>
 using namespace std;
-void arrange(int a[], int n){
+
+void arrange(int a[], int n){   //O(n) time
     int currOne = 0;
     for(int i=0; i<n; i++){
         if(a[i]==0)

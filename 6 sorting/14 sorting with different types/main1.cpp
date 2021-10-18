@@ -7,7 +7,7 @@ ex: a[] = {15, -3, -2, 18};
 #include<bits/stdc++.h>
 using namespace std;
 
-void arrange(int a[], int n){
+void arrange(int a[], int n){   //O(n) time
     int currPos = 0;
     for(int i=0;i<n;i++){
         if(a[i] <0){
