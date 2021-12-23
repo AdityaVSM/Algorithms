@@ -36,6 +36,7 @@ int main(){
         cout<<"\nLocation not same";
 
     //count(m) prints 1 if element m exists and 0 if it doesn't exist
+    //return type is boolean
     if(set.count(12)) 
         cout<<"\n12 Exists in set";
     else
