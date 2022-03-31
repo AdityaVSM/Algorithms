@@ -9,11 +9,35 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-    
+//naive --> O(n^2) check all char with individual char
+int eff1(const string &s){  //O(1)
+    int n = s.length();
+    int freq[256] = {0};
+    for(int i=0;i<26;i++){
+        freq[s[i]-'a']++;
+    }
+    for(int i=0;i<256;i++){
+        if(freq[i]>1)
+            return s.find((char)i+'a');
+    }
+    return -1;
+}
+int eff2(const string &s){  //O(1)
+    int n = s.length();
+    int freq[256] = {0};
+    for(int i=0;i<n;i++){
+        freq[s[i]]++;
+    }
+    for(int i=0;i<n;i++){
+        if(freq[s[i]]>1)
+            return i;
+    }
+    return -1;
+}
 
 
 int main(){
     string s = "abba";
-    cout<<naive(s)<<endl;
+    cout<<eff2(s)<<endl;
     return 0;
 }
