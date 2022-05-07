@@ -19,17 +19,17 @@ void RBSearch(string pat,string txt,int M, int N){
     
     for(int i=0;i<=(N-M);i++){
        //Check for hit
-       if(p==t){
-           bool flag=true;
-           for(int j=0;j<M;j++)
+        if(p==t){
+            bool flag=true;
+            for(int j=0;j<M;j++)
                 if(txt[i+j]!=pat[j]){flag=false;break;}
             if(flag==true)cout<<i<<" ";
-       }
+        }
        //Compute ti+1 using ti
-       if(i<N-M){
-           t=((d*(t-txt[i]*h))+txt[i+M])%q;
-        if(t<0)t=t+q;
-       }
+        if(i<N-M){
+            t=((d*(t-txt[i]*h))+txt[i+M])%q;
+            if(t<0) t=t+q;
+        }
     }
     
 }
