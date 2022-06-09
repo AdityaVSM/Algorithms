@@ -3,10 +3,10 @@
 
 using namespace std;
 
-Node* remove_dup(Node*head){
+void remove_dup(Node*head){ //No need to return head as head never changes
     if(head==NULL){
         cout << "LL is empty \n";
-        return head;
+        return;
     }
     Node* curr = head;
     while(curr!=NULL && curr->next!=NULL){
@@ -19,7 +19,6 @@ Node* remove_dup(Node*head){
         else
             curr = curr->next;
     }
-    return head;
 }
 int main(){
     Node* head = new Node(10);
@@ -33,7 +32,7 @@ int main(){
 
     l1->traverse(head);
 
-    head = remove_dup(head);
+    remove_dup(head);
     l1->traverse(head);    
     return 0;
 }
