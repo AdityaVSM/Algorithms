@@ -18,7 +18,7 @@ class DllNode {
         } 
 }; 
 
-class LRUCache{
+class LRUCache{     //O(1) for hit and miss
     public:
         unordered_map<int, DllNode*> map;
         int capacity, count;
@@ -102,6 +102,6 @@ int main(){
     cout<<"Value for the key: 1 is " << cache.get(1)<<endl; // returns -1 (not found) 
     cout<<"Value for the key: 3 is " << cache.get(3)<<endl; // returns 30 
     cout<<"Value for the key: 4 is " << cache.get(4)<<endl; // return 40 
-    
+
     return 0;
 }
