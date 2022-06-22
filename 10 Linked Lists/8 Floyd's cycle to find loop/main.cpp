@@ -25,6 +25,7 @@ bool loopExists(Node* head){
 int main(){
     Node* head = new Node(10);
 
+
     SingleLinkedList* l1 = new SingleLinkedList(head);
     head = l1->insert_first(head,5);
     head = l1->insert_end(head,15);
