@@ -14,7 +14,7 @@ bool matching(char a, char b){
     return false;
 }
 
-bool isBalanced(string s){
+bool isBalanced(string s){          //O(n) time and O(n) space
     MyStack<char> *stack = new MyStack<char>();
     for(int i=0;i<s.length();i++){
         if(s[i]=='(' || s[i]=='{' || s[i]=='['){
