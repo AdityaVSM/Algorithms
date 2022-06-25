@@ -2,29 +2,30 @@
 
 using namespace std;
 
-class MyStack{
+template <typename T> class MyStack{
     public:
-        vector<int> data;
+        vector<T> data;
         int top;
 
         MyStack(){
             top = -1;
         }
 
-        void push(int x){
+        void push(T x){
             top++;
             data.push_back(x);
         }
 
-        int pop(){
+        void pop(){
             if(top==-1){
                 cout<<"stack is empty"<<endl;
-                return -1;
+                return;
             }
-            return data[top--];
+            data.erase(data.begin()+top);
+            top--;
         }
 
-        int peek(){
+        T peek(){
             if(top==-1){
                 cout<<"stack Underflow"<<endl;
                 return -1;
@@ -39,15 +40,22 @@ class MyStack{
         bool isEmpty(){
             return top==-1;
         }
+
+        void display(){
+            for(T x : data){
+                cout<<x<<"->";
+            }
+            cout<<endl;
+        }
 };
 
-int main(){
-    MyStack *s = new MyStack();
-    s->push(10);
-    s->push(20);
+// int main(){
+//     MyStack *s = new MyStack();
+//     s->push(10);
+//     s->push(20);
     
 
-    cout << s->peek()<<endl;
-    cout<<s->isEmpty();
-    return 0;
-}
+//     cout << s->peek()<<endl;
+//     cout<<s->isEmpty();
+//     return 0;
+// }
