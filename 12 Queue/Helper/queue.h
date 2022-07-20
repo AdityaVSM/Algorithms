@@ -24,7 +24,7 @@ template <typename T> class Queue{
         T getFront(){
             if(size==0){
                 cout<<"Queue is empty"<<endl;
-                return -1;
+                return "-1";
             }
             return data[0];
         };
