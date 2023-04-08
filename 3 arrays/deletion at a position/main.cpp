@@ -10,6 +10,7 @@ int deleteElement(int arr[], int n, int ele){
             break;
         }
     }
+    
 
     for(int i=pos;i<n;i++){
         arr[i] = arr[i+1];
